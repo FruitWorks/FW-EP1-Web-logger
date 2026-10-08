@@ -5,9 +5,6 @@
 **Platform:** Chromium/Chrome + Web Bluetooth
 **Hardware:** XIAO ESP32-C6 + Muscle BioAmp Candy + LIS3DH
 
-## Goal
-A deliberately small, reliable BLE logger for EP1. No Python, no Bleak, no browser extensions, no local backend. The production web app is served over HTTPS because Web Bluetooth requires a secure context.
-
 ## BLE protocol
 - Device name: `Fruitworks-EP1`
 - Service UUID: `7d6b2a10-2f5d-4f6c-9d5f-1f4b9c0a1101`
