@@ -1,0 +1,3 @@
+FruitWorks EP1 Web Logger V1.0
+Development iteration: V3
+Protocol: EP1-BLE-V1

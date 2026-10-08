@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <title>Fruitworks EP1</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <img class="brand-logo" src="fruitworks_wordmark.svg" alt="Fruitworks">
+        <div class="product">EP1 · Web Logger V1</div>
+      </div>
+      <div id="status" class="status disconnected"><span></span>Disconnected</div>
+    </header>
+
+    <section class="hero">
+      <div class="toolbar">
+        <button id="connectBtn" class="primary">Connect</button>
+        <button id="disconnectBtn" disabled>Disconnect</button>
+        <button id="recordBtn" disabled>Start Recording</button>
+        <button id="saveBtn" disabled>Save CSV</button>
+      </div>
+      <div id="message" class="message">EP1 is ready.</div>
+    </section>
+
+    <section class="card graph-card">
+      <div class="card-head"><h2>EMG</h2><span id="streamRate">0 samples/s</span></div>
+      <canvas id="emgCanvas" width="1200" height="420" aria-label="Live EMG signal"></canvas>
+    </section>
+
+    <section class="grid">
+      <div class="card stats">
+        <div class="card-head"><h2>Stream</h2></div>
+        <div class="stat"><span>Samples</span><strong id="samples">0</strong></div>
+        <div class="stat"><span>Packets</span><strong id="packets">0</strong></div>
+        <div class="stat"><span>Lost</span><strong id="lost">0</strong></div>
+        <div class="stat"><span>Bad packets</span><strong id="bad">0</strong></div>
+      </div>
+      <div class="card stats">
+        <div class="card-head"><h2>Movement</h2></div>
+        <div class="stat"><span>X</span><strong id="ax">0 mg</strong></div>
+        <div class="stat"><span>Y</span><strong id="ay">0 mg</strong></div>
+        <div class="stat"><span>Z</span><strong id="az">0 mg</strong></div>
+        <div class="stat"><span>Device</span><strong id="deviceName">—</strong></div>
+      </div>
+    </section>
+
+    <footer>Fruitworks Technologies · EP1 · BLE protocol V1</footer>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>
